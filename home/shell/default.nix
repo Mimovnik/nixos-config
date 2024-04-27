@@ -51,6 +51,9 @@
 
       zoxide = {
         enable = true;
+	options = [
+	  "--cmd cd" # Alias to cd (cdi for interactive)
+	];
       };
   
       eza = {
