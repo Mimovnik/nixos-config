@@ -1,5 +1,5 @@
 {
-  description = "My NixOS flake";
+  description = "NixOS configuration of Mimovnik";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
@@ -10,10 +10,10 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.mimonixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.glados = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./configuration.nix
+        ./hosts/glados
 
 	# make home-manager as a module of nixos
 	# so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`

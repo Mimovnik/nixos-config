@@ -33,6 +33,8 @@
     ripgrep # recursively searches directories for a regex pattern
     eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
+    xclip
+    zoxide
 
     # misc
     cowsay
@@ -82,6 +84,14 @@
         init.defaultBranch = "main";
         push.autoSetupRemote = true;
       };
+  };
+
+  programs.neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
   };
 
   programs.bash = {
