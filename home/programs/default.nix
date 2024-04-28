@@ -22,6 +22,8 @@
 
     btop  # replacement of htop/nmon
 
+    dotnet-sdk_7
+
     # gui
     discord
     brave
