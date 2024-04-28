@@ -9,8 +9,7 @@
     };
 
     nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:elythh/nixvim";
     };
   };
 
@@ -19,7 +18,9 @@
     home-manager,
     nixvim,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    system = "x86_64-linux";
+  in {
     nixosConfigurations.glados = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -36,7 +37,8 @@
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
             extraSpecialArgs = {
-              nixvim = inputs.nixvim;
+              inherit (inputs) nixvim;
+              inherit system;
             };
           };
         }
