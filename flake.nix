@@ -7,9 +7,14 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+        url = "github:nix-community/nixvim/nixos-23.11";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nixvim, ... }@inputs: {
     nixosConfigurations.glados = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -19,11 +24,16 @@
 	# so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
 	home-manager.nixosModules.home-manager
 	{
-	  home-manager.useGlobalPkgs = true;
-	  home-manager.useUserPackages = true;
-	  home-manager.users.mimovnik = import ./home;
+	  home-manager = {
+	    useGlobalPkgs = true;
+	    useUserPackages = true;
+	    users.mimovnik = import ./home;
 
-	  # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+	    # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+	    extraSpecialArgs = {
+	       nixvim = inputs.nixvim;
+	    };
+	  };
 	}
       ];
     };

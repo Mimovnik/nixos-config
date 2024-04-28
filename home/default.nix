@@ -4,6 +4,7 @@
   imports = [
     ./programs
     ./shell
+    ./nixvim
   ];
 
   home.username = "mimovnik";
