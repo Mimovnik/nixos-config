@@ -30,7 +30,7 @@
 	  zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
         '';
 
-        enableAutosuggestions = true;
+        autosuggestion.enable = true;
 
         shellAliases = {
           rbld = "sudo nixos-rebuild";
@@ -59,7 +59,6 @@
   
       eza = {
         enable = true;
-        enableAliases = true;
         git = true;
         icons = true;
       };
