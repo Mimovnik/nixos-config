@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{pkgs, ...}: {
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     konsave
@@ -19,8 +17,9 @@
     # it provides the command `nom` works just like `nix`
     # with more details log output
     nix-output-monitor
+    alejandra
 
-    btop  # replacement of htop/nmon
+    btop # replacement of htop/nmon
 
     dotnet-sdk_7
 
@@ -31,15 +30,14 @@
   ];
 
   programs = {
-
     git = {
       enable = true;
       userName = "mimovnik";
       userEmail = "mimovnik@protonmail.com";
       extraConfig = {
-          init.defaultBranch = "main";
-          push.autoSetupRemote = true;
-        };
+        init.defaultBranch = "main";
+        push.autoSetupRemote = true;
+      };
     };
   };
 }

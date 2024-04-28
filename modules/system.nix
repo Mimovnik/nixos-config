@@ -1,15 +1,17 @@
-{ pkgs, lib, ... }:
-
 {
+  pkgs,
+  lib,
+  ...
+}: {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mimovnik = {
     isNormalUser = true;
     description = "mimovnik";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
   };
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Do garbage collection weekly to keep disk usage low
   nix.gc = {
@@ -38,7 +40,7 @@
     LC_TELEPHONE = "pl_PL.UTF-8";
     LC_TIME = "pl_PL.UTF-8";
   };
-  
+
   fonts = {
     packages = with pkgs; [
       # icon fonts
@@ -101,7 +103,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

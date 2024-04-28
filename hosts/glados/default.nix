@@ -1,16 +1,17 @@
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ 
-      # System config
-      ../../modules/system.nix
-      # Desktop environment config
-      ../../modules/kde-plasma.nix
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # System config
+    ../../modules/system.nix
+    # Desktop environment config
+    ../../modules/kde-plasma.nix
 
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

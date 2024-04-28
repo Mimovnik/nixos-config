@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     file
     which
@@ -12,55 +14,55 @@
 
   programs = {
     zsh = {
-        enable = true;
+      enable = true;
 
-        history = {
-          size = 10000;
-          path = "${config.xdg.dataHome}/zsh/history";
-          ignorePatterns = [
-            "*rm*"
-          ];
-        };
-
-        defaultKeymap = "emacs";
-
-        initExtra = ''
-          POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true;
-          unset SSH_ASKPASS;
-	  zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-        '';
-
-        autosuggestion.enable = true;
-
-        shellAliases = {
-          rbld = "sudo nixos-rebuild";
-        };
-
-        plugins = [
-          {
-            name = "powerlevel10k";
-            src = pkgs.zsh-powerlevel10k;
-            file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-          }
-          {
-            name = "powerlevel10k-config";
-            src = ./.; # Current directory
-            file = ".p10k.zsh";
-          }
+      history = {
+        size = 10000;
+        path = "${config.xdg.dataHome}/zsh/history";
+        ignorePatterns = [
+          "*rm*"
         ];
       };
 
-      zoxide = {
-        enable = true;
-	options = [
-	  "--cmd cd" # Alias to cd (cdi for interactive)
-	];
+      defaultKeymap = "emacs";
+
+      initExtra = ''
+               POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true;
+               unset SSH_ASKPASS;
+        zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+      '';
+
+      autosuggestion.enable = true;
+
+      shellAliases = {
+        rbld = "sudo nixos-rebuild";
       };
-  
-      eza = {
-        enable = true;
-        git = true;
-        icons = true;
-      };
+
+      plugins = [
+        {
+          name = "powerlevel10k";
+          src = pkgs.zsh-powerlevel10k;
+          file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        }
+        {
+          name = "powerlevel10k-config";
+          src = ./.; # Current directory
+          file = ".p10k.zsh";
+        }
+      ];
     };
+
+    zoxide = {
+      enable = true;
+      options = [
+        "--cmd cd" # Alias to cd (cdi for interactive)
+      ];
+    };
+
+    eza = {
+      enable = true;
+      git = true;
+      icons = true;
+    };
+  };
 }
