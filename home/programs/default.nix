@@ -27,6 +27,7 @@
     discord
     brave
     yakuake
+    godot_4
   ];
 
   programs = {
