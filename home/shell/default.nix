@@ -40,6 +40,11 @@
         getpass() {
           bw get password $1 | xclip -selection clipboard
         }
+
+        needssh() {
+          eval "$(ssh-agent -s)"
+          ssh-add
+        }
       '';
 
       autosuggestion.enable = true;
