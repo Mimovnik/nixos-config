@@ -19,6 +19,7 @@
     nix-output-monitor
     alejandra
 
+    htop
     btop # replacement of htop/nmon
 
     dotnet-sdk_7
