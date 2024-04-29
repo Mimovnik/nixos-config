@@ -18,8 +18,39 @@
     home-manager,
     nixvim,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    username = "mimovnik"; # Change this to your username
+  in {
     nixosConfigurations = {
+      # Copy the template and rename it to your hostname
+      # here \/
+      template = let
+        hostname = "template"; # < and here
+      in
+        nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/${hostname}
+            {
+              _module.args = {inherit hostname;};
+            }
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${username} = import ./home;
+
+                extraSpecialArgs = {
+                  inherit inputs;
+                  inherit system;
+                  inherit username;
+                };
+              };
+            }
+          ];
+        };
       glados = let
         hostname = "glados";
       in
@@ -36,11 +67,12 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.mimovnik = import ./home;
+                users.${username} = import ./home;
 
                 extraSpecialArgs = {
                   inherit inputs;
                   inherit system;
+                  inherit username;
                 };
               };
             }
