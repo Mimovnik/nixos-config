@@ -28,11 +28,18 @@
 
       initExtra = ''
         POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true;
+
         unset SSH_ASKPASS;
+
         zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
         bindkey  "^[[H"   beginning-of-line
         bindkey  "^[[F"   end-of-line
         bindkey  "^[[3~"  delete-char
+
+        getpass() {
+          bw get password $1 | xclip -selection clipboard
+        }
       '';
 
       autosuggestion.enable = true;
