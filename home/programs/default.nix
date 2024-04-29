@@ -28,6 +28,7 @@
     brave
     yakuake
     godot_4
+    unityhub
   ];
 
   programs = {
