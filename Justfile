@@ -1,10 +1,10 @@
 # just is a command runner, Justfile is very similar to Makefile, but simpler.
 
-rebuild:
+switch:
   sudo nixos-rebuild switch 
 
 test:
-  sudo nixos-rebuild test --show-trace --verbose
+  sudo nixos-rebuild test --show-trace
 
 up:
   nix flake update
