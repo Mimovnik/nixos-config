@@ -30,6 +30,7 @@
     yakuake
     godot_4
     unityhub
+    firefox
   ];
 
   programs = {
