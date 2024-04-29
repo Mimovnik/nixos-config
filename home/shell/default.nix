@@ -44,10 +44,6 @@
 
       autosuggestion.enable = true;
 
-      shellAliases = {
-        rbld = "sudo nixos-rebuild";
-      };
-
       plugins = [
         {
           name = "powerlevel10k";

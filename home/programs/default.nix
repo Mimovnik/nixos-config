@@ -14,6 +14,7 @@
     btop
     dotnet-sdk_7
     bitwarden-cli
+    just
 
     # gui
     discord
