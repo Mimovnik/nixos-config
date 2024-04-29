@@ -11,25 +11,32 @@
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
-
-  boot.initrd.availableKernelModules = ["ahci" "ohci_pci" "ehci_pci" "xhci_pci" "usb_storage" "usbhid" "sd_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-amd"];
-  boot.extraModulePackages = [];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/2839dd21-98be-40ae-a413-21e369e42ea0";
-    fsType = "ext4";
+  boot = {
+    initrd.availableKernelModules = ["ahci" "ohci_pci" "ehci_pci" "xhci_pci" "usb_storage" "usbhid" "sd_mod"];
+    initrd.kernelModules = [];
+    kernelModules = ["kvm-amd"];
+    extraModulePackages = [];
   };
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/2839dd21-98be-40ae-a413-21e369e42ea0";
+      fsType = "ext4";
+    };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/7699-7052";
-    fsType = "vfat";
-  };
+    "/boot" = {
+      device = "/dev/disk/by-uuid/7699-7052";
+      fsType = "vfat";
+    };
 
-  fileSystems."/home" = {
-    device = "/dev/disk/by-uuid/c07986a8-c096-4a6c-a143-d76cfce48850";
-    fsType = "ext4";
+    "/home" = {
+      device = "/dev/disk/by-uuid/c07986a8-c096-4a6c-a143-d76cfce48850";
+      fsType = "ext4";
+    };
+    "/MimoDisk" = {
+      device = "/dev/disk/by-uuid/288bb4d0-6dde-4a72-ac4e-8b0b18cecbf2";
+      fsType = "ext4";
+      options = ["nofail"];
+    };
   };
 
   swapDevices = [
