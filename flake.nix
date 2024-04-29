@@ -18,31 +18,34 @@
     home-manager,
     nixvim,
     ...
-  } @ inputs: let
-    system = "x86_64-linux";
-  in {
-    nixosConfigurations.glados = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./hosts/glados
+  } @ inputs: {
+    nixosConfigurations = {
+      glados = let
+        hostname = "glados";
+      in
+        nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/${hostname}
+            {
+              _module.args = {inherit hostname;};
+            }
 
-        # make home-manager as a module of nixos
-        # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.mimovnik = import ./home;
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.mimovnik = import ./home;
 
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-            extraSpecialArgs = {
-              inherit (inputs) nixvim;
-              inherit system;
-            };
-          };
-        }
-      ];
+                extraSpecialArgs = {
+                  inherit inputs;
+                  inherit system;
+                };
+              };
+            }
+          ];
+        };
     };
   };
 }

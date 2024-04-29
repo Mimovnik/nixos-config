@@ -1,23 +1,23 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{hostname, ...}: {
   imports = [
     # System config
     ../../modules/system.nix
     # Desktop environment config
     ../../modules/kde-plasma.nix
+    # Nvidia drivers
+    ../../modules/nvidia.nix
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    # Mount
+    ./mount.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "glados"; # Define your hostname.
+  networking.hostName = hostname; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -26,14 +26,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Nvidia GPU
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.opengl.enable = true;
-  hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    modesetting.enable = true;
-  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

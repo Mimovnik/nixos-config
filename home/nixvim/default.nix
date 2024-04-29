@@ -1,10 +1,10 @@
 {
-  nixvim,
+  inputs,
   system,
   lib,
   ...
 }: let
-  nixvim' = nixvim.packages.${system}.default;
+  nixvim' = inputs.nixvim.packages.${system}.default;
   nvim = nixvim'.nixvimExtend {
     config.theme = lib.mkForce "decay";
     config.vimAlias = true;
