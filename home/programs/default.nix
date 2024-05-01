@@ -7,13 +7,11 @@
     unzip
     wget
     curl
-    xclip
     nix-output-monitor
     alejandra
     htop
     btop
     dotnet-sdk_7
-    bitwarden-cli
     just
 
     # gui

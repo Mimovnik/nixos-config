@@ -10,6 +10,9 @@
     ripgrep
     bat
     fzf
+    keychain
+    bitwarden-cli
+    xclip
   ];
 
   programs = {
@@ -41,11 +44,12 @@
           bw get password $1 | xclip -selection clipboard
         }
 
-        needssh() {
-          eval "$(ssh-agent -s)"
-          ssh-add
-        }
+        eval $(keychain --eval --agents ssh);
       '';
+
+      shellAliases = {
+        needssh = "eval $(keychain --eval --agents ssh id_ed25519)";
+      };
 
       autosuggestion.enable = true;
 
