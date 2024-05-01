@@ -13,6 +13,11 @@
     keychain
     bitwarden-cli
     xclip
+    sshpass
+    (pkgs.fetchgit {
+      url = "https://github.com/Mimovnik/NeedSsh.git";
+      sha256 = "sha256-ElwaE7C8MlVhwgnzyIbkl2fCqfWBe6CtmgzYHdZgeNU=";
+    })
   ];
 
   programs = {
@@ -44,12 +49,8 @@
           bw get password $1 | xclip -selection clipboard
         }
 
-        eval $(keychain --eval --agents ssh);
+        eval $(keychain --eval --quiet --agents ssh);
       '';
-
-      shellAliases = {
-        needssh = "eval $(keychain --eval --agents ssh id_ed25519)";
-      };
 
       autosuggestion.enable = true;
 
