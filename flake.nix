@@ -9,7 +9,7 @@
     };
 
     nixvim = {
-      url = "github:elythh/nixvim";
+      url = "github:Mimovnik/nixvim";
     };
   };
 
