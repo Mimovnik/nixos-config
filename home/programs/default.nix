@@ -13,6 +13,7 @@
     btop
     dotnet-sdk_7
     just
+    playerctl
 
     # gui
     discord
