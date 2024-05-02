@@ -22,6 +22,7 @@
     godot_4
     unityhub
     firefox
+    signal-desktop
   ];
 
   programs = {
