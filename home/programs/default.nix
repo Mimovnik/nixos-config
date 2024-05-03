@@ -23,6 +23,7 @@
     unityhub
     firefox
     signal-desktop
+    kup
   ];
 
   programs = {
