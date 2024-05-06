@@ -24,6 +24,7 @@
     firefox
     signal-desktop
     kup
+    vscode.fhs
   ];
 
   programs = {
