@@ -14,6 +14,7 @@
     dotnet-sdk_7
     just
     playerctl
+    python3
 
     # gui
     discord
