@@ -16,6 +16,7 @@
     playerctl
     python3
     nnn
+    gcc
 
     # gui
     discord
