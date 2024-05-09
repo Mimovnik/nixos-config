@@ -32,7 +32,10 @@
           modules = [
             ./hosts/${hostname}
             {
-              _module.args = {inherit hostname;};
+              _module.args = {
+                inherit hostname;
+                inherit username;
+              };
             }
 
             home-manager.nixosModules.home-manager
@@ -59,7 +62,10 @@
           modules = [
             ./hosts/${hostname}
             {
-              _module.args = {inherit hostname;};
+              _module.args = {
+                inherit hostname;
+                inherit username;
+              };
             }
 
             home-manager.nixosModules.home-manager

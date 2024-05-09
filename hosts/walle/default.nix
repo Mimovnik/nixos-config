@@ -1,4 +1,9 @@
-{hostname, ...}: {
+{
+  hostname,
+  username,
+  pkgs,
+  ...
+}: {
   imports = [
     # System config
     ../../modules/system.nix
@@ -12,6 +17,9 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  programs.zsh.enable = true;
+  users.users.${username}.shell = pkgs.zsh;
 
   networking.hostName = hostname; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
