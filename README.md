@@ -4,10 +4,14 @@ This repository holds my NixOS desktop configuration.
 
 # Setup on NixOS
 
+## Enter nix shell with git
+```bash
+nix --extra-experimental-features "nix-command flakes" shell nixpkgs#git
+```
+
 ## Clone this repo
 
 ```bash
-nix --extra-experimental-features "nix-command flakes" shell nixpkgs#git
 git clone https:github.com/Mimovnik/nixos-config ~/.nixos-config
 ```
 
@@ -16,7 +20,7 @@ git clone https:github.com/Mimovnik/nixos-config ~/.nixos-config
 ```bash
 HNAME="hostnamegoeshere"
 # Create directory from a template
-cp ~/.nixos-config/hosts/template ~/.nixos-config/hosts/$HNAME
+cp -r ~/.nixos-config/hosts/template ~/.nixos-config/hosts/$HNAME
 
 # Copy hardware-configuration
 cp /etc/nixos/hardware-configuration.nix ~/.nixos-config/hosts/$HNAME
@@ -41,6 +45,9 @@ in
 username = "usernamegoeshere"; # Change this to your username
 
 ```
+
+Note:
+You need to either delete .git folder or git add flake.nix for nix to acknowledge a new host
 
 ## Rebuild
 
