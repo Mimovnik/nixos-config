@@ -6,6 +6,7 @@
     # Configure keymap in X11
     xkb.variant = "";
     xkb.layout = "pl";
+    xkb.options = "caps:escape";
   };
 
   # Configure console keymap
