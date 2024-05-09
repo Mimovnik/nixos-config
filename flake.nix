@@ -51,6 +51,33 @@
             }
           ];
         };
+      walle = let
+        hostname = "walle";
+      in
+        nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/${hostname}
+            {
+              _module.args = {inherit hostname;};
+            }
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${username} = import ./home;
+
+                extraSpecialArgs = {
+                  inherit inputs;
+                  inherit system;
+                  inherit username;
+                };
+              };
+            }
+          ];
+        };
       glados = let
         hostname = "glados";
       in
