@@ -28,6 +28,7 @@
     signal-desktop
     kup
     vscode.fhs
+    anki
   ];
 
   programs = {
