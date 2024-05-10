@@ -29,6 +29,7 @@
     kup
     vscode.fhs
     anki
+    jetbrains.idea-community
   ];
 
   programs = {
