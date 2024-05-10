@@ -17,6 +17,7 @@
     python3
     nnn
     gcc
+    gnumake
 
     # gui
     discord
