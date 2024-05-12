@@ -43,7 +43,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.${username} = import ./home;
+                users.${username} = import ./hosts/${hostname}/home.nix;
 
                 extraSpecialArgs = {
                   inherit inputs;
@@ -73,7 +73,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.${username} = import ./home;
+                users.${username} = import ./hosts/${hostname}/home.nix;
 
                 extraSpecialArgs = {
                   inherit inputs;
@@ -100,7 +100,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.${username} = import ./home;
+                users.${username} = import ./hosts/${hostname}/home.nix;
 
                 extraSpecialArgs = {
                   inherit inputs;
