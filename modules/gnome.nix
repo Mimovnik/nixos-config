@@ -33,12 +33,10 @@
       pkgs.orca
     ];
 
-    sessionVariables.GTK_THEME = "adw-gtk3-dark";
-
     systemPackages = with pkgs; [
-      adw-gtk3
       gnomeExtensions.only-window-maximize
       gnomeExtensions.appindicator
+      gnome-themes-extra
     ];
   };
 
