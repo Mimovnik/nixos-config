@@ -17,6 +17,7 @@
     python3
     nnn
     gcc
+    gnumake
 
     # gui
     discord
@@ -28,6 +29,8 @@
     signal-desktop
     kup
     vscode.fhs
+    anki
+    jetbrains.idea-community
   ];
 
   programs = {
