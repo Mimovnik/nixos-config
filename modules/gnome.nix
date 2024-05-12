@@ -37,7 +37,6 @@
 
     systemPackages = with pkgs; [
       adw-gtk3
-      gnome.adwaita-icon-theme
       gnomeExtensions.only-window-maximize
       gnomeExtensions.appindicator
     ];

@@ -1,12 +1,34 @@
-{username, ...}: {
+{
+  username,
+  pkgs,
+  ...
+}: {
   imports = [
     ./programs
     ./shell
     ./nixvim
   ];
+
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+      size = 22;
+    };
+  };
+
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
+
+    # In this approach cursor theme changes when hovering over some apps to default one
+    # pointerCursor = {
+    #   gtk.enable = true;
+    #   package = pkgs.bibata-cursors;
+    #   name = "Bibata-Modern-Ice";
+    #   size = 22;
+    # };
 
     # link the configuration file in current directory to the specified location in home directory
     # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
