@@ -18,6 +18,7 @@
     nnn
     gcc
     gnumake
+    gdb
     ssh-audit
     lynis
 
