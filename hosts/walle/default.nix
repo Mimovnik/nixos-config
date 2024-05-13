@@ -10,6 +10,8 @@
     # Desktop environment config
     ../../modules/gnome.nix
 
+    ../../modules/etc-hosts.nix
+
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
