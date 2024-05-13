@@ -18,6 +18,8 @@
     nnn
     gcc
     gnumake
+    ssh-audit
+    lynis
 
     # gui
     discord
