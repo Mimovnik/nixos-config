@@ -21,6 +21,7 @@
     gdb
     ssh-audit
     lynis
+    android-tools
 
     # gui
     discord
