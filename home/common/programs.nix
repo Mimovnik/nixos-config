@@ -36,6 +36,7 @@
     anki
     jetbrains.idea-community
     krita
+    onlyoffice-bin
   ];
 
   programs = {
