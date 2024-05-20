@@ -35,6 +35,7 @@
     vscode.fhs
     anki
     jetbrains.idea-community
+    krita
   ];
 
   programs = {
