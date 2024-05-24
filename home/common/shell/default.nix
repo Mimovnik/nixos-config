@@ -50,6 +50,9 @@
         }
 
         eval $(keychain --eval --quiet --agents ssh);
+
+        export PATH=~/.npm-packages/bin:$PATH
+        export NODE_PATH=~/.npm-packages/lib/node_modules
       '';
 
       autosuggestion.enable = true;
