@@ -24,9 +24,9 @@
     android-tools
 
     # gui
+    kitty
     discord
     brave
-    yakuake
     godot_4
     unityhub
     firefox

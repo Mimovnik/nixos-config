@@ -81,6 +81,10 @@
     curl
   ];
 
+  # Set zsh as default shell
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
   environment.variables.EDITOR = "vim";
 
   # Enable sound with pipewire.
