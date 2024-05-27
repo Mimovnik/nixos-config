@@ -12,10 +12,10 @@
     networkmanagerapplet # provide GUI app: nm-connection-editor
     pavucontrol
     light
-
     hyprshot # screen shot
     grim # taking screenshots
     slurp # selecting a region to screenshot
     wf-recorder # screen recording
+    hyprcursor
   ];
 }
