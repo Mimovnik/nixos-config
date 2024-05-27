@@ -2,6 +2,8 @@
 
 ## Autostart Programs
 
+signal-desktop &
+
 # Launch notification daemon (mako)
 ~/.config/hypr/scripts/notifications &
 

@@ -37,6 +37,7 @@
     jetbrains.idea-community
     krita
     onlyoffice-bin
+    imv # simple image viewer
   ];
 
   programs = {
