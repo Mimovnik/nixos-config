@@ -1,6 +1,6 @@
 {...}: {
   imports = [
     ../../home
-    ../../home/modules/gtk.nix
+    ../../home/modules/hyprland/default.nix
   ];
 }

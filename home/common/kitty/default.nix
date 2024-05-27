@@ -4,7 +4,7 @@
     theme = "One Dark";
     font = {
       name = "JetBrainsMono Nerd Font";
-      size = 13;
+      size = 10;
     };
 
     keybindings = {

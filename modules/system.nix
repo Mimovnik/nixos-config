@@ -79,6 +79,7 @@
     git
     wget
     curl
+    killall
   ];
 
   # Set zsh as default shell

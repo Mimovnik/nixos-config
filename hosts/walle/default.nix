@@ -8,7 +8,7 @@
     # System config
     ../../modules/system.nix
     # Desktop environment config
-    ../../modules/gnome.nix
+    ../../modules/hyprland.nix
 
     ../../modules/etc-hosts.nix
 
