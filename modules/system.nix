@@ -80,6 +80,7 @@
     wget
     curl
     killall
+    nix-prefetch-git
   ];
 
   # Set zsh as default shell
