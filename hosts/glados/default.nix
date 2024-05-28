@@ -3,9 +3,11 @@
     # System config
     ../../modules/system.nix
     # Desktop environment config
-    ../../modules/kde-plasma.nix
+    ../../modules/hyprland.nix
     # Nvidia drivers
     ../../modules/nvidia.nix
+
+    ../../modules/etc-hosts.nix
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
