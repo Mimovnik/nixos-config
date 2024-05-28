@@ -6,11 +6,8 @@ if [[ pid ]]; then
   kill -9 ${pid}
 fi
 
-
 ## launch mako with alt config
 
 CONFIG="$HOME/.config/hypr/mako/config"
 
-if [[ ! $(pidof mako) ]]; then
-	mako --config ${CONFIG}
-fi
+pidof mako || mako --config ${CONFIG}

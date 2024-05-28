@@ -2,7 +2,9 @@
 
 ## Autostart Programs
 
-signal-desktop &
+pidof signal-desktop || signal-desktop &
+
+pidof hypridle || hypridle &
 
 # Launch notification daemon (mako)
 ~/.config/hypr/scripts/notifications &

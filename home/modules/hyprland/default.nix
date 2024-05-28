@@ -12,6 +12,14 @@ in {
     source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/hyprland.conf";
   };
 
+  home.file.".config/hypr/hyprlock.conf" = {
+    source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/hyprlock.conf";
+  };
+
+  home.file.".config/hypr/hypridle.conf" = {
+    source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/hypridle.conf";
+  };
+
   home.file.".config/hypr/scripts" = {
     source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/scripts";
     recursive = true;
