@@ -11,7 +11,7 @@
     mako # the notification daemon, the same as dunst
     networkmanagerapplet # provide GUI app: nm-connection-editor
     pavucontrol
-    light
+    brightnessctl
     hyprshot # screen shot
     grim # taking screenshots
     slurp # selecting a region to screenshot
