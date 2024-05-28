@@ -6,11 +6,11 @@
     "custom/launcher",
     "backlight",
     "idle_inhibitor",
-    "hyprland/workspaces",
+    "custom/playerctl",
   ],
 
   "modules-center": [
-    "custom/playerctl",
+    "hyprland/workspaces",
   ],
 
   "modules-right": [

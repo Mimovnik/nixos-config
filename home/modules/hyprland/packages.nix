@@ -4,9 +4,11 @@
     hyprpaper # the wallpaper
     hypridle # the idle timeout
     hyprlock # locking the screen
+    hyprpicker # color picker
+    imagemagick
+
     wlogout # logout menu
     wl-clipboard # copying and pasting
-    hyprpicker # color picker
     libnotify # needed for notify-send
     mako # the notification daemon, the same as dunst
     networkmanagerapplet # provide GUI app: nm-connection-editor

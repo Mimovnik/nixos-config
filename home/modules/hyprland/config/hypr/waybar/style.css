@@ -1,76 +1,113 @@
-@import "mocha.css";
+@import "../colors.css";
 
 * {
   /* https://docs.gtk.org/gtk3/css-overview.html#colors */
-  color: @text;
+  color: black;
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 12pt;
+  font-size: 10pt;
   font-weight: bold;
   border-radius: 8px;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
+
 @keyframes blink_red {
   to {
-    background-color: rgb(242, 143, 173);
-    color: rgb(26, 24, 38);
+    background-color: @dark-red;
+    color: @light-red;
   }
 }
+
 .warning,
 .critical,
 .urgent {
   animation-name: blink_red;
   animation-duration: 1s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 5;
   animation-direction: alternate;
 }
+
 window#waybar {
-  background-color: transparent;
-  border: 2px solid alpha(@crust, 0.3);
+  background-color: alpha(@black, 0.9);
+  border: 2px solid alpha(@blue, 0.3);
 }
+
 window > box {
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  background-color: shade(@base, 0.9);
   padding: 3px;
   padding-left: 8px;
-  border: 2px none #33ccff;
+  border: 2px none @blue;
 }
+
+#custom-launcher {
+  font-size: 20px;
+  padding-left: 8px;
+  padding-right: 4px;
+  color: @blue;
+  background-color: alpha(black, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#idle_inhibitor {
+  color: @gutter-grey;
+  padding-left: 8px;
+  padding-right: 16px;
+  background-color: alpha(black, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+#custom-playerctl {
+  color: @white;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: alpha(black, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 #workspaces {
-  padding-left: 0px;
+  padding-left: 10px;
   padding-right: 4px;
 }
+
 #workspaces button {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 6px;
   padding-right: 6px;
+  background-color: alpha(@gutter-grey, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
 }
+
 #workspaces button.active {
-  background-color: rgb(248, 189, 150);
-  color: rgb(26, 24, 38);
+  color: @black;
+  background-color: alpha(@blue, 0.5);
 }
+
 #workspaces button.urgent {
-  color: rgb(26, 24, 38);
+  color: @light-red;
 }
+
 #workspaces button:hover {
-  background-color: rgb(181, 232, 224);
-  color: rgb(26, 24, 38);
+  background-color: @comment-grey;
+  color: @black;
 }
+
 tooltip {
-  background: rgb(48, 45, 65);
+  background: black;
 }
+
 tooltip label {
-  color: rgb(217, 224, 238);
+  color: @white;
 }
-#custom-launcher {
-  font-size: 20px;
-  padding-left: 8px;
-  padding-right: 6px;
-  color: #7ebae4;
-}
+
 #mode,
 #clock,
 #memory,
@@ -82,81 +119,85 @@ tooltip label {
 #backlight,
 #pulseaudio,
 #network,
-#battery,
-#custom-powermenu {
+#battery
+ {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* #mode { */
-/* 	margin-left: 10px; */
-/* 	background-color: rgb(248, 189, 150); */
-/*     color: rgb(26, 24, 38); */
-/* } */
-#memory {
-  color: rgb(181, 232, 224);
-}
-#cpu {
-  color: rgb(245, 194, 231);
-}
-#clock {
-  color: rgb(217, 224, 238);
+#custom-powermenu {
+  padding-left: 10px;
+  padding-right: 14px;
+  margin-right: 10px;
+  background-color: alpha(black, 0.5);
+  color: @light-red;
 }
 
-#idle_inhibitor {
-  color: rgb(221, 182, 242);
-  padding-right: 8px;
+#memory {
+  color: @light-yellow;
 }
+
+#cpu {
+  color: @cyan;
+}
+
+#clock {
+  color: @blue;
+  background-color: alpha(black, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 #battery {
   min-width: 55px;
-  color: rgb(126, 186, 244);
+  color: @white;
 }
+
 #battery.charging,
 #battery.full,
 #battery.plugged {
-  color: #26a65b;
+  color: @green;
 }
+
 #battery.critical:not(.charging) {
-  color: #f53c3c;
+  color: @light-red;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-#custom-wall {
-  color: #33ccff;
-}
+
 #temperature {
-  color: rgb(150, 205, 251);
+  color: @light-yellow;
 }
+
 #backlight {
-  color: rgb(248, 189, 150);
+  color: @dark-yellow;
 }
+
 #pulseaudio {
-  color: rgb(245, 224, 220);
+  color: @white;
+  background-color: alpha(black, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
 }
+
 #network {
-  color: #abe9b3;
+  color: @green;
+  background-color: alpha(black, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
 }
+
 #network.disconnected {
-  color: rgb(255, 255, 255);
+  color: @dark-red;
 }
-#custom-powermenu {
-  color: rgb(242, 143, 173);
-  padding-right: 8px;
-}
+
 #tray {
   padding-right: 8px;
   padding-left: 10px;
-}
-#mpd.paused {
-  color: #414868;
-  font-style: italic;
-}
-#mpd.stopped {
-  background: transparent;
-}
-#mpd {
-  color: #c0caf5;
+  background-color: alpha(black, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
 }

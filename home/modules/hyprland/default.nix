@@ -20,6 +20,10 @@ in {
     source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/hypridle.conf";
   };
 
+  home.file.".config/hypr/colors.css" = {
+    source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/colors.css";
+  };
+
   home.file.".config/hypr/scripts" = {
     source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/scripts";
     recursive = true;
