@@ -123,6 +123,9 @@ tooltip label {
  {
   padding-left: 10px;
   padding-right: 10px;
+  background-color: alpha(black, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #custom-powermenu {
