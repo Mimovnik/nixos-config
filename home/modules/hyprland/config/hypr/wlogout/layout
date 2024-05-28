@@ -1,36 +1,36 @@
 {
     "label" : "lock",
     "action" : "loginctl lock-session",
-    "text" : "Lock",
+    "text" : "Lock [L]",
     "keybind" : "l"
 }
 {
     "label" : "hibernate",
     "action" : "systemctl hibernate",
-    "text" : "Hibernate",
+    "text" : "Hibernate [H]",
     "keybind" : "h"
 }
 {
     "label" : "logout",
     "action" : "~/.config/hypr/scripts/logoutwithgrace",
-    "text" : "Logout",
+    "text" : "Logout [E]",
     "keybind" : "e"
 }
 {
     "label" : "shutdown",
     "action" : "~/.config/hypr/scripts/poweroffwithgrace",
-    "text" : "Shutdown",
+    "text" : "Shutdown [S]",
     "keybind" : "s"
 }
 {
     "label" : "suspend",
     "action" : "systemctl suspend",
-    "text" : "Suspend",
+    "text" : "Suspend [U]",
     "keybind" : "u"
 }
 {
     "label" : "reboot",
     "action" : "~/.config/hypr/scripts/rebootwithgrace",
-    "text" : "Reboot",
+    "text" : "Reboot [R]",
     "keybind" : "r"
 }
