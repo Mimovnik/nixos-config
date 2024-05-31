@@ -20,8 +20,15 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # zsh as default shell
   programs.zsh.enable = true;
   users.users.${username}.shell = pkgs.zsh;
+
+  # auto-cpufreq
+  environment.systemPackages = with pkgs; [
+    auto-cpufreq
+  ];
+  services.auto-cpufreq.enable = true;
 
   networking.hostName = hostname; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
