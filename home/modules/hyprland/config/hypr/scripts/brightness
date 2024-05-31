@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 ## Script To Manage Brightness (in Wayland).
 
@@ -6,7 +6,7 @@ iDIR="$HOME/.config/hypr/mako/icons"
 
 # Get brightness
 get_backlight() {
-  LIGHT=$(printf %f $(($(brightnessctl g) / $(brightnessctl m).0)))
+  LIGHT=$(printf %.0f $((100.0 * $(brightnessctl g) / $(brightnessctl m).0)))
 	echo "${LIGHT}%"
 }
 
