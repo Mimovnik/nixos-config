@@ -53,6 +53,7 @@
 
         export PATH=~/.npm-packages/bin:$PATH
         export NODE_PATH=~/.npm-packages/lib/node_modules
+        export MIMODISK=/run/media/mimovnik/MimoDisk
       '';
 
       autosuggestion.enable = true;

@@ -12,7 +12,7 @@
     libnotify # needed for notify-send
     mako # the notification daemon, the same as dunst
     networkmanagerapplet # provide GUI app: nm-connection-editor
-    pavucontrol
+    pwvucontrol
     brightnessctl
     hyprshot # screen shot
     grim # taking screenshots

@@ -13,5 +13,10 @@
       name = "Materia-dark";
       package = pkgs.materia-theme;
     };
+
+    iconTheme = {
+      name = "Tela";
+      package = pkgs.tela-icon-theme;
+    };
   };
 }
