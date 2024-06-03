@@ -6,6 +6,7 @@
     hyprlock # locking the screen
     hyprpicker # color picker
     imagemagick
+    libsForQt5.polkit-kde-agent
 
     wlogout # logout menu
     wl-clipboard # copying and pasting
