@@ -35,6 +35,7 @@
     vscode.fhs
     anki
     jetbrains.idea-community
+    jetbrains.rider
     krita
     onlyoffice-bin
     imv # simple image viewer
