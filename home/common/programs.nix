@@ -22,6 +22,8 @@
     ssh-audit
     lynis
     android-tools
+    traceroute
+    dig
 
     # gui
     kitty
