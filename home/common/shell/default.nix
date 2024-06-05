@@ -58,6 +58,10 @@
 
       autosuggestion.enable = true;
 
+      shellAliases = {
+        ssh = "kitten ssh";
+      };
+
       plugins = [
         {
           name = "powerlevel10k";
