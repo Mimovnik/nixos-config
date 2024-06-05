@@ -4,6 +4,8 @@
 
 pidof signal-desktop || signal-desktop &
 
+pidof nm-applet || nm-applet &
+
 pidof hypridle || hypridle &
 
 # Launch notification daemon (mako)

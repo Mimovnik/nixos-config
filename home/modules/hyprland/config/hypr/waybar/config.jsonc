@@ -16,7 +16,6 @@
   "modules-right": [
     "tray",
     "pulseaudio",
-    "network",
     "battery",
     "clock",
     "custom/powermenu",
@@ -83,20 +82,6 @@
       "Paused": "<span foreground='#6dd9d9'></span>",
       "Playing": "<span foreground='#82db97'></span>",
     },
-  },
-
-  "network": {
-    "interval": 5,
-    //"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
-    "format-wifi": " {essid}",
-    "format-ethernet": " {ipaddr}",
-    "format-linked": " {ifname} (No IP)",
-    "format-disconnected": "睊 Disconnected",
-    "format-disabled": "睊 Disabled",
-    "format-alt": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
-    "tooltip-format": " {ifname} via {gwaddr}",
-    "on-click-middle": "kitty nmtui",
-    "on-click-right": "nm-connection-editor",
   },
 
   "pulseaudio": {
