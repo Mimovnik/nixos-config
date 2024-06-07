@@ -24,6 +24,7 @@
     android-tools
     traceroute
     dig
+    imv # simple image viewer
 
     # gui
     kitty
@@ -40,7 +41,7 @@
     jetbrains.rider
     krita
     onlyoffice-bin
-    imv # simple image viewer
+    obsidian
   ];
 
   programs = {
