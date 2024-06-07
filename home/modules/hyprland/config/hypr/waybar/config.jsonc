@@ -3,14 +3,12 @@
   "layer": "top",
 
   "modules-left": [
+    "custom/powermenu",
     "custom/launcher",
-    "backlight",
-    "idle_inhibitor",
-    "custom/playerctl",
+    "hyprland/workspaces",
   ],
 
   "modules-center": [
-    "hyprland/workspaces",
   ],
 
   "modules-right": [
@@ -18,26 +16,11 @@
     "pulseaudio",
     "battery",
     "clock",
-    "custom/powermenu",
   ],
 
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
-    "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "10",
-      "focused": "",
-      "default": "",
-    },
   },
 
   "clock": {
@@ -61,15 +44,6 @@
     "tooltip": false,
   },
 
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "\uf06e",
-      "deactivated": "\uf070",
-    },
-    "tooltip": false,
-  },
-
   "custom/playerctl": {
     "format": "{icon}  <span>{}</span>",
     "return-type": "json",
@@ -86,7 +60,7 @@
 
   "pulseaudio": {
     // "format": "{volume}% {icon} {format_source}",
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-muted": " Mute",
     "format-bluetooth": " {volume}% {format_source}",
     "format-bluetooth-muted": " Mute",
@@ -106,11 +80,6 @@
     "on-click": "amixer set Master toggle",
     "on-click-right": "pwvucontrol",
     "smooth-scrolling-threshold": 1,
-  },
-
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
 
   "tray": {

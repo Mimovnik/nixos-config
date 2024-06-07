@@ -2,7 +2,7 @@
 
 * {
   /* https://docs.gtk.org/gtk3/css-overview.html#colors */
-  color: black;
+  color: @white;
   font-family: "JetBrainsMono Nerd Font";
   font-size: 10pt;
   font-weight: bold;
@@ -29,8 +29,7 @@
 }
 
 window#waybar {
-  background-color: alpha(@black, 0.9);
-  border: 2px solid alpha(@blue, 0.3);
+  background-color: transparent;
 }
 
 window > box {
@@ -39,7 +38,37 @@ window > box {
   margin-top: 5px;
   padding: 3px;
   padding-left: 8px;
-  border: 2px none @blue;
+}
+
+tooltip {
+  background: black;
+}
+
+tooltip label {
+  color: @white;
+}
+
+#custom-launcher,
+#workspaces button,
+#custom-playerctl,
+#tray,
+#pulseaudio,
+#battery,
+#clock,
+#custom-powermenu
+{
+  background-color: alpha(black, 0.5);
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#battery
+ {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #custom-launcher {
@@ -47,28 +76,12 @@ window > box {
   padding-left: 8px;
   padding-right: 4px;
   color: @blue;
-  background-color: alpha(black, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
 }
-
-#idle_inhibitor {
-  color: @gutter-grey;
-  padding-left: 8px;
-  padding-right: 16px;
-  background-color: alpha(black, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
 
 #custom-playerctl {
   color: @white;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: alpha(black, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 #workspaces {
@@ -81,9 +94,6 @@ window > box {
   padding-bottom: 5px;
   padding-left: 6px;
   padding-right: 6px;
-  background-color: alpha(@gutter-grey, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 #workspaces button.active {
@@ -100,55 +110,8 @@ window > box {
   color: @black;
 }
 
-tooltip {
-  background: black;
-}
-
-tooltip label {
-  color: @white;
-}
-
-#mode,
-#clock,
-#memory,
-#temperature,
-#cpu,
-#mpd,
-#custom-wall,
-#temperature,
-#backlight,
-#pulseaudio,
-#network,
-#battery
- {
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: alpha(black, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#custom-powermenu {
-  padding-left: 10px;
-  padding-right: 14px;
-  margin-right: 10px;
-  background-color: alpha(black, 0.5);
-  color: @light-red;
-}
-
-#memory {
-  color: @light-yellow;
-}
-
-#cpu {
-  color: @cyan;
-}
-
 #clock {
   color: @blue;
-  background-color: alpha(black, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 #battery {
@@ -171,26 +134,12 @@ tooltip label {
   animation-direction: alternate;
 }
 
-#temperature {
-  color: @light-yellow;
-}
-
-#backlight {
-  color: @dark-yellow;
-}
-
 #pulseaudio {
   color: @white;
-  background-color: alpha(black, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 #network {
   color: @green;
-  background-color: alpha(black, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 #network.disconnected {
@@ -200,7 +149,11 @@ tooltip label {
 #tray {
   padding-right: 8px;
   padding-left: 10px;
-  background-color: alpha(black, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
 }
+
+#custom-powermenu {
+  padding-left: 10px;
+  padding-right: 14px;
+  margin-right: 10px;
+}
+
