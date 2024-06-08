@@ -20,6 +20,10 @@ in {
     source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/hypridle.conf";
   };
 
+  home.file.".config/hypr/hyprpaper.conf" = {
+    source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/hyprpaper.conf";
+  };
+
   home.file.".config/hypr/colors.css" = {
     source = mkOutOfStoreSymlink "/home/mimovnik/.nixos-config/home/modules/hyprland/config/hypr/colors.css";
   };

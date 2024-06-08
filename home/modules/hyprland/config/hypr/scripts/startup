@@ -8,6 +8,8 @@ pidof nm-applet || nm-applet &
 
 pidof hypridle || hypridle &
 
+pidof hyprpaper || hyprpaper &
+
 # Launch notification daemon (mako)
 ~/.config/hypr/scripts/notifications &
 
