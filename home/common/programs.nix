@@ -25,6 +25,7 @@
     traceroute
     dig
     imv # simple image viewer
+    gnupg
 
     # gui
     kitty
@@ -42,6 +43,8 @@
     krita
     onlyoffice-bin
     obsidian
+    qbittorrent
+    gnome.nautilus
   ];
 
   programs = {
