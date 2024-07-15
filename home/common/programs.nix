@@ -1,12 +1,11 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     # cli
-    konsave
-    neofetch
     zip
     unzip
     wget
     curl
+    dig
     nix-output-monitor
     alejandra
     htop
@@ -15,15 +14,10 @@
     just
     playerctl
     python3
-    nnn
     gcc
     gnumake
     gdb
-    ssh-audit
-    lynis
-    android-tools
     traceroute
-    dig
     imv # simple image viewer
     gnupg
 
@@ -38,8 +32,6 @@
     kup
     vscode.fhs
     anki
-    jetbrains.idea-community
-    jetbrains.rider
     krita
     onlyoffice-bin
     obsidian
