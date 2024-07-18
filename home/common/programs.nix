@@ -37,6 +37,7 @@
     obsidian
     qbittorrent
     gnome.nautilus
+    nextcloud-client
   ];
 
   programs = {
