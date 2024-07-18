@@ -8,7 +8,7 @@
     # System config
     ../../modules/system.nix
     # Desktop environment config
-    ../../modules/hyprland.nix
+    ../../modules/kde-plasma.nix
 
     ../../modules/etc-hosts.nix
 
