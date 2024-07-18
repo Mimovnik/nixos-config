@@ -60,6 +60,7 @@
 
       shellAliases = {
         ssh = "kitten ssh";
+        xcopy = "xclip -selection clipboard";
       };
 
       plugins = [
