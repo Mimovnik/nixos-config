@@ -3,7 +3,7 @@
     # System config
     ../../modules/system.nix
     # Desktop environment config
-    ../../modules/hyprland.nix
+    ../../modules/kde-plasma.nix
     # Nvidia drivers
     ../../modules/nvidia.nix
 
