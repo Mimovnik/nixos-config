@@ -3,15 +3,13 @@
     # System config
     ../../modules/system.nix
     # Desktop environment config
-    ../../modules/desktop/kde-plasma.nix
+    ../../modules/desktop/i3.nix
     # Nvidia drivers
     ../../modules/nvidia.nix
 
     ../../modules/etc-hosts.nix
 
     ../../modules/steam.nix
-
-    ../../modules/flatpak.nix
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
