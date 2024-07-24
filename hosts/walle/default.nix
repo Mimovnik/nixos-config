@@ -8,7 +8,7 @@
     # System config
     ../../modules/system.nix
     # Desktop environment config
-    ../../modules/kde-plasma.nix
+    ../../modules/desktop/kde-plasma.nix
 
     ../../modules/etc-hosts.nix
 

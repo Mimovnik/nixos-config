@@ -1,6 +1,8 @@
 {...}: {
   imports = [
     ../../home
-    # ../../home/modules/gtk.nix
+    ../../home/modules/nixvim.nix
+    ../../home/modules/kitty
+    ../../home/modules/shell
   ];
 }

@@ -1,6 +1,6 @@
 {username, ...}: {
   imports = [
-    ./common
+    ./programs.nix
   ];
 
   home = {
