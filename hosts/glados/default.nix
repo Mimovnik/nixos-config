@@ -9,6 +9,8 @@
 
     ../../modules/etc-hosts.nix
 
+    ../../modules/steam.nix
+
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     # Mount
