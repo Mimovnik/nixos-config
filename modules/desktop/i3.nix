@@ -24,6 +24,7 @@
         dunst # notification daemon
         i3blocks # status bar
         i3lock # default i3 screen locker
+        autotiling
         xautolock # lock screen after some time
         i3status # provide information to i3bar
         i3-gaps # i3 with gaps
