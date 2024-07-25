@@ -20,6 +20,7 @@
     traceroute
     imv # simple image viewer
     gnupg
+    pavucontrol
 
     # gui
     kitty

@@ -81,6 +81,7 @@
     curl
     killall
     nix-prefetch-git
+    pulseaudio
   ];
 
   # Set zsh as default shell
