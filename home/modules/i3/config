@@ -37,6 +37,11 @@ workspace $ws8 output DVI-D-0
 workspace $ws9 output DVI-D-0
 workspace $ws10 output DVI-D-0
 
+# scratchpad
+for_window [instance="__scratchpad"] move scratchpad 
+exec --no-startup-id kitty --name __scratchpad
+bindsym $mod+i scratchpad show
+
 workspace_layout default
 
 new_window pixel 1
