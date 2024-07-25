@@ -10,11 +10,11 @@ test:
 
 # Update whole system
 up:
-  nix flake update
+  sudo nix flake update
 
 # Update specific input
 upp INPUT:
-  nix flake lock --update-input {{INPUT}}
+  sudo nix flake lock --update-input {{INPUT}}
 
 # Show generations history
 history:
