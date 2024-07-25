@@ -90,6 +90,8 @@
 
   environment.variables.EDITOR = "vim";
 
+  security.polkit.enable = true;
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
