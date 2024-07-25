@@ -32,14 +32,14 @@
   networking.networkmanager.enable = true;
 
   # VM
-  virtualisation.virtualbox = {
-    host = {
-      enable = true;
-      enableExtensionPack = true;
-    };
-  };
-
-  users.extraGroups.vboxusers.members = ["mimovnik"];
+  # virtualisation.virtualbox = {
+  #   host = {
+  #     enable = true;
+  #     enableExtensionPack = true;
+  #   };
+  # };
+  #
+  # users.extraGroups.vboxusers.members = ["mimovnik"];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
