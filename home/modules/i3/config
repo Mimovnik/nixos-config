@@ -60,6 +60,15 @@ set $mod Mod4
 # start a terminal
 bindsym $mod+t exec kitty
 
+# start browser
+bindsym $mod+b exec brave
+
+# start discord
+bindsym $mod+d exec discord
+
+# start godot
+bindsym $mod+g exec godot
+
 # kill focused window
 bindsym $mod+q kill
 
