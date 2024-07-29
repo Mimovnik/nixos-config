@@ -61,6 +61,12 @@
       shellAliases = {
         ssh = "kitten ssh";
         xcopy = "xclip -selection clipboard";
+      
+        gs = "git status";
+        gd = "git diff";
+        ga = "git add";
+        gc = "git commit";
+        gl = "git log";
       };
 
       plugins = [
