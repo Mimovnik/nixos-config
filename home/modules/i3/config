@@ -23,19 +23,23 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+exec --no-startup-id "xrandr --output HDMI-0 --primary"
 
 # use workspaces on different displays:
 # you can get from xrandr command
-workspace $ws1 output HDMI-0
-workspace $ws2 output HDMI-0
-workspace $ws3 output HDMI-0
-workspace $ws4 output DVI-D-0
-workspace $ws5 output DVI-D-0
-workspace $ws6 output DVI-D-0
-workspace $ws7 output DVI-D-0
-workspace $ws8 output DVI-D-0
-workspace $ws9 output DVI-D-0
-workspace $ws10 output DVI-D-0
+set $monitor1 "HDMI-0"
+set $monitor2 "DP-2"
+
+workspace $ws1 output $monitor1
+workspace $ws2 output $monitor1
+workspace $ws3 output $monitor1
+workspace $ws4 output $monitor2
+workspace $ws5 output $monitor2
+workspace $ws6 output $monitor2
+workspace $ws7 output $monitor2
+workspace $ws8 output $monitor2
+workspace $ws9 output $monitor2
+workspace $ws10 output $monitor2
 
 # scratchpad
 for_window [instance="__scratchpad"] move scratchpad 
